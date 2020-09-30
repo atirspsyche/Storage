@@ -1,94 +1,45 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Login And Registration form </title>
-  <link rel="stylesheet" href="mainstyle.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      var text = $("h1");
-      text.animate({ fontSize: '2rem', opacity: '0.2' }, "medium");
-      text.animate({ fontSize: '2.15rem', opacity: '0.4' }, "medium");
-      text.animate({ fontSize: '2.2rem', opacity: '0.6' }, "medium");
-      text.animate({ fontSize: '2.15rem', opacity: '0.8' }, "medium");
-      text.animate({ fontSize: '2rem', opacity: '0.8' }, "medium");
-      text.animate({ fontSize: '2rem', opacity: '1' }, "slow");
-    });
-  </script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Page</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    var text = $("h1");
+    text.animate({fontSize: '5.4rem', opacity: '0.2'}, "slow");
+    text.animate({fontSize: '8rem', opacity: '0.4'}, "slow");
+    text.animate({fontSize: '7rem', opacity: '0.6'}, "slow");
+    text.animate({fontSize: '6rem', opacity: '0.8'}, "slow");
+    text.animate({fontSize: '4rem', opacity: '0.8'}, "slow");
+    text.animate({fontSize: '5.4rem', opacity: '1'}, "slow");
+  });
+  
+</script>
+<script>
+  $(document).ready(function(){
+  $(".button").hover(function(){
+    $(this).css("transform", "translateY(-0.2rem)");
+    },function(){
+    $(this).css("transform", "none");
+  });
+});
+</script>
 
 </head>
-
 <body>
-  <div class="hero">
-    <div class="Form-box">
-      <div class="text">
-        <h1>Login and Register</h1>
-      </div>
-      <div class="button-box">
-        <div id="btn"></div>
-        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
-        <button type="button" class="toggle-btn" onclick="Register()">Register</button>
-      </div>
+  <div class="container">
+    <div id="first" class="f-center f-col-center">
 
-      <form id="login" class="input-group" name="myForm" onsubmit="return validate()">
-        <input type="text" class="input-field" placeholder="Username" name="username">
-        <input type="password" class="input-field" placeholder="Password" name="pass">
-        <input type="checkbox" class="check-box"><span>Remember Password</span>
-        <button type="submit" class="submit-btn">Log in</button>
-      </form>
-
-      <form id="Register" class="input-group">
-        <input type="text" class="input-field" placeholder="Name" required>
-        <input type="text" class="input-field" placeholder="Username" required>
-        <input type="password" class="input-field" placeholder="Enter Password" required>
-        <input type="number" class="input-field" placeholder="Mobile Number" required>
-        <input type="Date" class="input-field" placeholder="dd/mm/yy" required>
-
-        <input type="checkbox" class="check-box"><span>I agree all the terms & conditions</span>
-        <button type="submit" id="submit" class="submit-btn">Register</button>
-      </form>
+      <h1>Are you ready?</h1>
+      <a class="button" href="ex_page.html" id = "clicked">Start</a>
+      <a class="button" href="main.html" id="hidden">Go back</a>
+      <a class="button" href="#" id="hidden">Instructions</a>
+      
     </div>
   </div>
-  <script>
-    var x = document.getElementById("login")
-    var y = document.getElementById("Register")
-    var z = document.getElementById("btn")
-    var l = document.getElementById("submit")
-
-
-
-    function Register() {
-      x.style.left = "-400px";
-      y.style.left = "50px";
-      z.style.left = "50%";
-      z.style.background = "linear-gradient(to left,#FFD700,#FFFFE0)";
-      l.style.background = "linear-gradient(to left,#FFD700,#FFFFE0)";
-    }
-    function login() {
-      x.style.left = "50px";
-      y.style.left = "450px";
-      z.style.left = "0%";
-      z.style.background = "linear-gradient(to right,#FFD700,#FFFFE0)";
-
-    }
-    function validate() {
-      var valu = document.forms["myForm"]["uid"].value;
-      var valp = document.forms["myForm"]["pass"].value;
-      if (valu == "") {
-        alert("UID must be filled out");
-        return false;
-      }
-      if (valp == "") {
-        alert("Password must be filled out");
-        return false;
-      }
-    }
-
-  </script>
-
-
+  
 </body>
-
 </html>
